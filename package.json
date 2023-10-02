@@ -1,0 +1,61 @@
+{
+  "name": "mz-browser-extensions",
+  "version": "1.0.0",
+  "description": "mz-browser-extensions is a TypeScript-based library for managing browser extensions.",
+  "main": "./dist/mz-browser-extensions.min.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "node run/es6.js",
+    "watch": "node run/es6.js -- watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "eslint": "eslint ./src/**",
+    "typescript-declarations": "tsc --emitDeclarationOnly",
+    "docs:website": "http-server ./docs",
+    "docs:build": "node ./src/docs/generator/index.js",
+    "docs:watch": "nodemon ./src/docs/generator/index.js"
+  },
+  "type": "module",
+  "keywords": [
+    "chrome",
+    "browser",
+    "extension"
+  ],
+  "author": "Miriam Zusin <miriam.zusin@gmail.com>",
+  "license": "MIT",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mzusin/mz-browser-extensions.git"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@types/jest": "^29.2.3",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "esbuild": "^0.16.3",
+    "eslint": "^8.27.0",
+    "highlight.js": "^11.7.0",
+    "jest": "^29.3.1",
+    "markdown-documentation-maker": "^1.0.13",
+    "mz-particles": "^1.0.5",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      ".git",
+      "node_modules/**/node_modules"
+    ],
+    "verbose": false,
+    "watch": [
+      "src/"
+    ],
+    "ext": "js,json,html,css,md,ts,tsx,glsl"
+  }
+}
