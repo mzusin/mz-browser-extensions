@@ -1,0 +1,5 @@
+https://browser-extensions.mzsoft.org
+https://browser-extensions.mzsoft.org/pages/basic-usage.html
+https://browser-extensions.mzsoft.org/pages/storage.html
+https://browser-extensions.mzsoft.org/pages/tabs.html
+https://browser-extensions.mzsoft.org/pages/screenshot.html

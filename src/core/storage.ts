@@ -50,7 +50,7 @@ export const getLocalData = <T>(key: string) : Promise<T|null> => {
     });
 };
 
-export const saveSyncData = <T>(key: string, data: T) : Promise<void> => {
+export const setSyncData = <T>(key: string, data: T) : Promise<void> => {
 
     return new Promise((resolve, reject) => {
         try{
@@ -69,7 +69,7 @@ export const saveSyncData = <T>(key: string, data: T) : Promise<void> => {
     });
 };
 
-export const saveLocalData = <T>(key: string, data: T) : Promise<void> => {
+export const setLocalData = <T>(key: string, data: T) : Promise<void> => {
 
     return new Promise((resolve, reject) => {
         try{
