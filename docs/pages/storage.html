@@ -16,8 +16,8 @@
   <link id="favicon-32" rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32.png" />
   <link id="favicon-16" rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16.png" />
 
-  <link rel="stylesheet" href="/css/styles.1696244129935.css" />
-  <!--<link rel="stylesheet" href="/js/index.1696244129935.css" />-->
+  <link rel="stylesheet" href="/css/styles.1696249199835.css" />
+  <!--<link rel="stylesheet" href="/js/index.1696249199835.css" />-->
 
 </head>
 <body class="h-screen flex flex-col font-roboto bg-white dark:bg-slate-900 dark:text-slate-100">
@@ -132,6 +132,8 @@
 <p class="mb-4"><strong class="font-bold">getSyncData / getLocalData</strong></p>
 <pre class="hljs p-4 mb-4 rounded-md shadow-xl overflow-auto whitespace-pre-wrap text-base"><code><span class="hljs-keyword">import</span> { getSyncData, getLocalData } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mz-browser-extensions&#x27;</span>;
 
+<span class="hljs-comment">// required permissions: &quot;storage&quot;</span>
+
 <span class="hljs-keyword">type</span> <span class="hljs-title class_">MyData</span> = {
     <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
     <span class="hljs-attr">value</span>: <span class="hljs-built_in">number</span>;
@@ -141,6 +143,8 @@
 <span class="hljs-keyword">const</span> locaData = <span class="hljs-keyword">await</span> getLocalData&lt;<span class="hljs-title class_">MyData</span>&gt;(<span class="hljs-string">&#x27;my-key&#x27;</span>);</code></pre>
 <p class="mb-4"><strong class="font-bold">setSyncData / setLocalData</strong></p>
 <pre class="hljs p-4 mb-4 rounded-md shadow-xl overflow-auto whitespace-pre-wrap text-base"><code><span class="hljs-keyword">import</span> { setSyncData, setLocalData } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mz-browser-extensions&#x27;</span>;
+
+<span class="hljs-comment">// required permissions: &quot;storage&quot;</span>
 
 <span class="hljs-keyword">type</span> <span class="hljs-title class_">MyData</span> = {
     <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
@@ -152,8 +156,17 @@
 <p class="mb-4"><strong class="font-bold">deleteSyncData / setLocalData</strong></p>
 <pre class="hljs p-4 mb-4 rounded-md shadow-xl overflow-auto whitespace-pre-wrap text-base"><code><span class="hljs-keyword">import</span> { deleteSyncData, deleteLocalData } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mz-browser-extensions&#x27;</span>;
 
+<span class="hljs-comment">// required permissions: &quot;storage&quot;</span>
+
 <span class="hljs-keyword">await</span> <span class="hljs-title function_">deleteSyncData</span>(<span class="hljs-string">&#x27;my-key&#x27;</span>);
 <span class="hljs-keyword">await</span> <span class="hljs-title function_">deleteLocalData</span>(<span class="hljs-string">&#x27;my-key&#x27;</span>);</code></pre>
+<p class="mb-4"><strong class="font-bold">clearSyncStorage / clearLocalStorage</strong></p>
+<pre class="hljs p-4 mb-4 rounded-md shadow-xl overflow-auto whitespace-pre-wrap text-base"><code><span class="hljs-keyword">import</span> { clearSyncStorage, clearLocalStorage } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mz-browser-extensions&#x27;</span>;
+
+<span class="hljs-comment">// required permissions: &quot;storage&quot;</span>
+
+<span class="hljs-keyword">await</span> <span class="hljs-title function_">clearSyncStorage</span>();
+<span class="hljs-keyword">await</span> <span class="hljs-title function_">clearLocalStorage</span>();</code></pre>
 </div>
 
       <div class="w-800 max-w-full mx-auto grid lg:grid-cols-2 gap-8 items-center text-slate-500">
@@ -196,6 +209,6 @@
   </div>
 </footer>-->
 
-<script src="/js/index.1696244129935.js"></script>
+<script src="/js/index.1696249199835.js"></script>
 </body>
 </html>
