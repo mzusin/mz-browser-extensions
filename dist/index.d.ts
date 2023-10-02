@@ -10,6 +10,10 @@ declare module 'mz-browser-extensions' {
     export const clearSyncStorage: () => Promise<unknown>;
     export const clearLocalStorage: () => Promise<unknown>;
 
+    export const getCookie: (domain: string, name: string) => Promise<unknown>;
+    export const setCookie: (url: string, name: string, value: string) => Promise<void>;
+    export const removeCookie: (url: string, name: string) => Promise<void>;
+
     /// <reference types="chrome" />
     export const getActiveTab: () => Promise<chrome.tabs.Tab>;
     export const getTabZoom: (tabId: number) => Promise<number>;
