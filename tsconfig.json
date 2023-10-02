@@ -12,7 +12,6 @@
     "useDefineForClassFields": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
-    "suppressImplicitAnyIndexErrors": true,
 
     "declaration": true,
     "declarationMap": false,
