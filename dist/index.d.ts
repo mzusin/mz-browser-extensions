@@ -7,5 +7,7 @@ declare module 'mz-browser-extensions' {
     export const deleteLocalData: (key: string) => Promise<unknown>;
 
     /// <reference types="chrome" />
-    export const getCurrentTab: () => Promise<chrome.tabs.Tab>;
+    export const getActiveTab: () => Promise<chrome.tabs.Tab>;
+
+    export const captureVisibleAreaScreenshot: (format: string) => Promise<string | null>;
 }

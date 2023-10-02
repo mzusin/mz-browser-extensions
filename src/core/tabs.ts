@@ -1,4 +1,4 @@
-export const getCurrentTab = () : Promise<chrome.tabs.Tab> => {
+export const getActiveTab = () : Promise<chrome.tabs.Tab> => {
     return new Promise((resolve, reject) => {
         try{
             chrome.tabs.query({
