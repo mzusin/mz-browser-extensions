@@ -54,3 +54,14 @@ import { clearSyncStorage, clearLocalStorage } from 'mz-browser-extensions';
 await clearSyncStorage();
 await clearLocalStorage();
 ```
+
+**clearSyncStorage / clearLocalStorage**
+
+```ts
+import { clearSyncStorage, clearLocalStorage } from 'mz-browser-extensions';
+
+// required permissions: "storage"
+
+await clearSyncStorage();
+await clearLocalStorage();
+```

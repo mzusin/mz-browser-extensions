@@ -7,6 +7,8 @@ declare module 'mz-browser-extensions' {
     export const deleteLocalData: (key: string) => Promise<unknown>;
     export const clearSyncStorage: () => Promise<unknown>;
     export const clearLocalStorage: () => Promise<unknown>;
+    export const clearSyncStorage: () => Promise<unknown>;
+    export const clearLocalStorage: () => Promise<unknown>;
 
     /// <reference types="chrome" />
     export const getActiveTab: () => Promise<chrome.tabs.Tab>;

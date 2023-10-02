@@ -51,6 +51,36 @@ export const getLocalData = <T>(key: string) : Promise<T|null> => {
     });
 };
 
+export const getAllSyncData = () => {
+
+    return new Promise((resolve, reject) => {
+        try{
+            chrome.storage.sync.get(null, (items) => {
+                resolve(items);
+            });
+        }
+        catch (ex) {
+            console.error(ex);
+            reject(ex);
+        }
+    });
+};
+
+export const getLocalSyncData = () => {
+
+    return new Promise((resolve, reject) => {
+        try{
+            chrome.storage.local.get(null, (items) => {
+                resolve(items);
+            });
+        }
+        catch (ex) {
+            console.error(ex);
+            reject(ex);
+        }
+    });
+};
+
 /**
  * Sync can contain 512 items max, 102400 bytes max, 8192 bytes max per item.
  */
