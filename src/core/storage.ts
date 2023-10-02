@@ -88,3 +88,28 @@ export const saveLocalData = <T>(key: string, data: T) : Promise<void> => {
     });
 };
 
+export const deleteSyncData = (key: string) => {
+    return new Promise((resolve, reject) => {
+        try{
+            chrome.storage.sync.remove(key, () => {
+                resolve(null);
+            });
+        }
+        catch (ex) {
+            reject(ex);
+        }
+    });
+};
+
+export const deleteLocalData = (key: string) => {
+    return new Promise((resolve, reject) => {
+        try{
+            chrome.storage.local.remove(key, () => {
+                resolve(null);
+            });
+        }
+        catch (ex) {
+            reject(ex);
+        }
+    });
+};
