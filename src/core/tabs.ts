@@ -18,3 +18,11 @@ export const getActiveTab = () : Promise<chrome.tabs.Tab> => {
         }
     });
 };
+
+export const getTabZoom = (tabId: number) : Promise<number> => {
+    return new Promise((resolve, _reject) => {
+        chrome.tabs.getZoom(tabId, (zoomFactor) => {
+            resolve(zoomFactor);
+        });
+    });
+};

@@ -8,6 +8,7 @@ declare module 'mz-browser-extensions' {
 
     /// <reference types="chrome" />
     export const getActiveTab: () => Promise<chrome.tabs.Tab>;
+    export const getTabZoom: (tabId: number) => Promise<number>;
 
     export const captureVisibleAreaScreenshot: (format: string) => Promise<string | null>;
 }
