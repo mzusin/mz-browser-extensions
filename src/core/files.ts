@@ -49,7 +49,10 @@ export interface IFileType {
 /**
  * https://developer.mozilla.org/en-US/docs/Web/API/File_System_API
  */
-export const getFile = (fileTypes: IFileType[]) => {
+export const getFile = (fileTypes: IFileType[]) : Promise<{
+    name: string,
+    text: string,
+}> => {
     return new Promise((resolve, reject) => {
         (async () => {
             try {
@@ -88,7 +91,7 @@ export const getFile = (fileTypes: IFileType[]) => {
     });
 };
 
-export const saveFile = (fileTypes: IFileType[], fileName: string, text: string) => {
+export const saveFile = (fileTypes: IFileType[], fileName: string, text: string) : Promise<void> => {
     return new Promise((resolve, reject) => {
         (async () => {
             try {
@@ -111,7 +114,7 @@ export const saveFile = (fileTypes: IFileType[], fileName: string, text: string)
                 await ws.write(text);
                 await ws.close();
 
-                resolve(null);
+                resolve();
             }
             catch (ex) {
                 reject(ex);
