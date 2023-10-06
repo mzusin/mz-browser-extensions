@@ -57,14 +57,14 @@ export const getFile = (fileTypes: IFileType[]) : Promise<{
         (async () => {
             try {
                 /*
-                const fileTypes = [
-                   {
-                       description: "Text file",
-                       accept: {
-                           "text/plain": [".txt"]
-                       }
-                   },
-               ];*/
+               const fileTypes = [
+                {
+                    description: 'Text file',
+                    accept: {
+                        'text/plain': ['.txt']
+                    }
+                },
+            ];*/
 
                 const fileHandlerArray = await window.showOpenFilePicker({
                     types: fileTypes
@@ -97,13 +97,13 @@ export const saveFile = (fileTypes: IFileType[], fileName: string, text: string)
             try {
                 /*
                 const fileTypes = [
-                   {
-                       description: "Text file",
-                       accept: {
-                           "text/plain": [".txt"]
-                       }
-                   },
-               ];*/
+                    {
+                        description: 'Text file',
+                        accept: {
+                            'text/plain': ['.txt']
+                        }
+                    },
+                ];*/
 
                 const fileHandler = await window.showSaveFilePicker({
                     types: fileTypes,
