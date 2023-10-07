@@ -12,6 +12,8 @@ try {
 } catch (ex) {}
 
 const settings = {
+    platform: 'neutral',
+    format: 'esm',
     entryPoints: ['./src/index.ts'],
     bundle: true,
     minify: true,
