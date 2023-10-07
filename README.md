@@ -21,6 +21,7 @@ TypeScript-based library for managing browser extensions APIs with async/await.
 
 
 
+
 ``` 
  _______          _________ _______  _        _______ _________ _______  _        _______ 
 (  ____ \|\     /|\__   __/(  ____ \( (    /|(  ____ \\__   __/(  ___  )( (    /|(  ____ \

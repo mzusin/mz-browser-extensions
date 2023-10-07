@@ -16,8 +16,8 @@
   <link id="favicon-32" rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32.png" />
   <link id="favicon-16" rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16.png" />
 
-  <link rel="stylesheet" href="/css/styles.1696686096556.css" />
-  <!--<link rel="stylesheet" href="/js/index.1696686096556.css" />-->
+  <link rel="stylesheet" href="/css/styles.1696686148947.css" />
+  <!--<link rel="stylesheet" href="/js/index.1696686148947.css" />-->
 
 </head>
 <body class="h-screen flex flex-col font-roboto bg-white dark:bg-slate-900 dark:text-slate-100">
@@ -132,7 +132,9 @@
 <p class="mb-4"><strong class="font-bold">Create DevTools Panel</strong></p>
 <pre class="hljs p-4 mb-4 rounded-md shadow-xl overflow-auto whitespace-pre-wrap text-base"><code><span class="hljs-keyword">import</span> { createDevtoolsPanel } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mz-browser-extensions&#x27;</span>;
 
-<span class="hljs-comment">// Manifest: &quot;devtools_page&quot;: &quot;devtools.html&quot;</span>
+<span class="hljs-comment">// Manifest: </span>
+<span class="hljs-comment">// &quot;devtools_page&quot;: &quot;devtools.html&quot;</span>
+<span class="hljs-comment">// &quot;host_permissions&quot;: [ &quot;&lt;all_urls&gt;&quot; ]</span>
 
 <span class="hljs-keyword">const</span> panel = <span class="hljs-keyword">await</span> <span class="hljs-title function_">createDevtoolsPanel</span>(<span class="hljs-string">&#x27;Panel Title&#x27;</span>, <span class="hljs-string">&#x27;img/panel-icon.png&#x27;</span>, <span class="hljs-string">&#x27;html/panel.html&#x27;</span>);</code></pre>
 </div>
@@ -162,6 +164,6 @@
   </div>
 </footer>-->
 
-<script src="/js/index.1696686096556.js"></script>
+<script src="/js/index.1696686148947.js"></script>
 </body>
 </html>
