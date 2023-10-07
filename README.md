@@ -10,7 +10,9 @@ TypeScript-based library for managing browser extensions APIs with async/await.
 - [Tabs](https://browser-extensions.mzsoft.org/pages/tabs.html)
 - [Screenshot](https://browser-extensions.mzsoft.org/pages/screenshot.html)
 - [Files](https://browser-extensions.mzsoft.org/pages/files.html)
+- [Devtools](https://browser-extensions.mzsoft.org/pages/devtools.html)
 ------------------------------
+
 
 
 

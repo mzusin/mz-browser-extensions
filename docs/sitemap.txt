@@ -5,3 +5,4 @@ https://browser-extensions.mzsoft.org/pages/cookies.html
 https://browser-extensions.mzsoft.org/pages/tabs.html
 https://browser-extensions.mzsoft.org/pages/screenshot.html
 https://browser-extensions.mzsoft.org/pages/files.html
+https://browser-extensions.mzsoft.org/pages/devtools.html

@@ -123,65 +123,21 @@
           <path d="m7 7 5 5-5 5m6-10 5 5-5 5"/>
         </svg>
 
-    </div><div class="flex flex-col" data-links><a href="/pages/storage.html" title="" class="pl-3 border-l border-slate-150 dark:border-slate-600 pb-2 text-slate-500">Storage</a><a href="/pages/cookies.html" title="" class="pl-3 border-l border-slate-150 dark:border-slate-600 pb-2 text-slate-500">Cookies</a><a href="/pages/tabs.html" title="" class="pl-3 border-l border-slate-150 dark:border-slate-600 pb-2 text-slate-500">Tabs</a><a href="/pages/screenshot.html" title="" class="pl-3 border-l border-slate-150 dark:border-slate-600 pb-2 text-slate-500">Screenshot</a><a href="/pages/files.html" title="" class="pl-3 border-l border-slate-150 dark:border-slate-600 pb-2 text-sky-500">Files</a><a href="/pages/devtools.html" title="" class="pl-3 border-l border-slate-150 dark:border-slate-600  text-slate-500">Devtools</a></div>
+    </div><div class="flex flex-col" data-links><a href="/pages/storage.html" title="" class="pl-3 border-l border-slate-150 dark:border-slate-600 pb-2 text-slate-500">Storage</a><a href="/pages/cookies.html" title="" class="pl-3 border-l border-slate-150 dark:border-slate-600 pb-2 text-slate-500">Cookies</a><a href="/pages/tabs.html" title="" class="pl-3 border-l border-slate-150 dark:border-slate-600 pb-2 text-slate-500">Tabs</a><a href="/pages/screenshot.html" title="" class="pl-3 border-l border-slate-150 dark:border-slate-600 pb-2 text-slate-500">Screenshot</a><a href="/pages/files.html" title="" class="pl-3 border-l border-slate-150 dark:border-slate-600 pb-2 text-slate-500">Files</a><a href="/pages/devtools.html" title="" class="pl-3 border-l border-slate-150 dark:border-slate-600  text-sky-500">Devtools</a></div>
       </div>
     </div>
 
     <div class="p-4 overflow-y-auto h-full md:w-100-350 dark:bg-slate-800">
-      <div class="w-800 max-w-full mx-auto my-10 leading-7 text-lg text-slate-800 dark:text-slate-200"><h2 class="text-3xl mb-8">Files</h2>
-<p class="mb-4"><strong class="font-bold">Download</strong></p>
-<pre class="hljs p-4 mb-4 rounded-md shadow-xl overflow-auto whitespace-pre-wrap text-base"><code><span class="hljs-keyword">import</span> { download } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mz-browser-extensions&#x27;</span>;
+      <div class="w-800 max-w-full mx-auto my-10 leading-7 text-lg text-slate-800 dark:text-slate-200"><h2 class="text-3xl mb-8">DevTools</h2>
+<p class="mb-4"><strong class="font-bold">Create DevTools Panel</strong></p>
+<pre class="hljs p-4 mb-4 rounded-md shadow-xl overflow-auto whitespace-pre-wrap text-base"><code><span class="hljs-keyword">import</span> { createDevtoolsPanel } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mz-browser-extensions&#x27;</span>;
 
-<span class="hljs-comment">// required permissions: &quot;downloads&quot;</span>
-
-<span class="hljs-keyword">const</span> url = <span class="hljs-string">&#x27;https://....&#x27;</span>;
-<span class="hljs-keyword">const</span> filename = <span class="hljs-string">&#x27;my-file.txt&#x27;</span>;
-
-<span class="hljs-comment">// Start download</span>
-<span class="hljs-keyword">await</span> <span class="hljs-title function_">download</span>(url, filename);</code></pre>
-<p class="mb-4"><strong class="font-bold">Load File</strong></p>
-<pre class="hljs p-4 mb-4 rounded-md shadow-xl overflow-auto whitespace-pre-wrap text-base"><code><span class="hljs-keyword">import</span> { getFile } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mz-browser-extensions&#x27;</span>;
-
-<span class="hljs-keyword">const</span> fileTypes = [
-    {
-        <span class="hljs-attr">description</span>: <span class="hljs-string">&#x27;Text file&#x27;</span>,
-        <span class="hljs-attr">accept</span>: {
-            <span class="hljs-string">&#x27;text/plain&#x27;</span>: [<span class="hljs-string">&#x27;.txt&#x27;</span>]
-        }
-    },
-];
-
-<span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> <span class="hljs-title function_">getFile</span>(fileTypes);
-
-<span class="hljs-comment">/*
-Result:
-------- 
-{
-    name: string,
-    text: string,
-}
-*/</span></code></pre>
-<p class="mb-4"><strong class="font-bold">Save File</strong></p>
-<pre class="hljs p-4 mb-4 rounded-md shadow-xl overflow-auto whitespace-pre-wrap text-base"><code><span class="hljs-keyword">import</span> { saveFile } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;mz-browser-extensions&#x27;</span>;
-
-<span class="hljs-keyword">const</span> fileTypes = [
-    {
-        <span class="hljs-attr">description</span>: <span class="hljs-string">&#x27;Text file&#x27;</span>,
-        <span class="hljs-attr">accept</span>: {
-            <span class="hljs-string">&#x27;text/plain&#x27;</span>: [<span class="hljs-string">&#x27;.txt&#x27;</span>]
-        }
-    },
-];
-
-<span class="hljs-keyword">const</span> fileName = <span class="hljs-string">&#x27;my-file.txt&#x27;</span>;
-<span class="hljs-keyword">const</span> text = <span class="hljs-string">&#x27;... any text ...&#x27;</span>;
-
-<span class="hljs-keyword">await</span> <span class="hljs-title function_">saveFile</span>(fileTypes, fileName, text);</code></pre>
+<span class="hljs-keyword">const</span> panel = <span class="hljs-keyword">await</span> <span class="hljs-title function_">createDevtoolsPanel</span>(<span class="hljs-string">&#x27;Pnale Title&#x27;</span>, <span class="hljs-string">&#x27;img/panel-icon.png&#x27;</span>, <span class="hljs-string">&#x27;html/panel.html&#x27;</span>);</code></pre>
 </div>
 
-      <div class="w-800 max-w-full mx-auto grid lg:grid-cols-2 gap-8 items-center text-slate-500">
+      <div class="w-800 max-w-full mx-auto grid  gap-8 items-center text-slate-500">
 <div class="flex justify-between items-start border border-slate-200 rounded p-4">
-  <a href="/pages/screenshot.html" title="" class="mr-4 hover:text-blue-500">
+  <a href="/pages/files.html" title="" class="mr-4 hover:text-blue-500">
     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24">
     <path stroke="none" d="M0 0h24v24H0z"/>
     <path d="M5 12h14M5 12l6 6m-6-6 6-6"/>
@@ -189,24 +145,9 @@ Result:
   </a>
   <div class="flex flex-col items-end justify-center">
     <div class="mb-2 text-sm text-slate-300">Previous</div>
-    <a href="/pages/screenshot.html" title="" class="hover:text-blue-500">Screenshot</a>
+    <a href="/pages/files.html" title="" class="hover:text-blue-500">Files</a>
   </div>
 </div>      
-    
-<div class="flex justify-between items-start border border-slate-200 rounded p-4">
-  
-  <div class="flex flex-col justify-center">
-    <div class="mb-2 text-sm text-slate-300">Next</div>
-    <a href="/pages/devtools.html" title="" class="hover:text-blue-500">Devtools</a>
-  </div>
-  
-  <a href="/pages/devtools.html" title="" class="mr-4 hover:text-blue-500">
-    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24">
-     <path stroke="none" d="M0 0h24v24H0z"/>
-     <path d="M5 12h14m-6 6 6-6m-6-6 6 6"/>
-  </svg>
-  </a>
-</div>  
     </div>
     </div>
 

@@ -37,4 +37,5 @@ declare module 'mz-browser-extensions' {
     }>;
     export const saveFile: (fileTypes: IFileType[], fileName: string, text: string) => Promise<void>;
 
+    export const createDevtoolsPanel: (title: string, iconPath: string, pagePath: string) => Promise<chrome.devtools.panels.ExtensionPanel>;
 }
