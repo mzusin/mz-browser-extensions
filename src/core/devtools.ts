@@ -1,5 +1,6 @@
 /**
  * const panel = await createDevtoolsPanel('Waves A/B Test', 'img/panel-icon.png', 'html/panel.html');
+ * Manifest: "devtools_page": "devtools.html"
  */
 export const createDevtoolsPanel = (
     title: string,

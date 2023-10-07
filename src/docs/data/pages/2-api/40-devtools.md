@@ -5,5 +5,7 @@
 ```ts
 import { createDevtoolsPanel } from 'mz-browser-extensions';
 
-const panel = await createDevtoolsPanel('Pnale Title', 'img/panel-icon.png', 'html/panel.html');
+// Manifest: "devtools_page": "devtools.html"
+
+const panel = await createDevtoolsPanel('Panel Title', 'img/panel-icon.png', 'html/panel.html');
 ```

@@ -1,9 +1,10 @@
 {
   "name": "mz-browser-extensions",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "mz-browser-extensions is a TypeScript-based library for managing browser extensions.",
   "main": "./dist/mz-browser-extensions.min.js",
   "types": "./dist/index.d.ts",
+  "module": "./dist/mz-browser-extensions.min.js",
   "scripts": {
     "build": "node run/es6.js",
     "watch": "node run/es6.js -- watch",
