@@ -26,3 +26,17 @@ export const getTabZoom = (tabId: number) : Promise<number> => {
         });
     });
 };
+
+/*
+export const openNewTab = (createProperties: chrome.tabs.CreateProperties) : Promise<chrome.tabs.Tab> => {
+    return new Promise((resolve, reject) => {
+
+        try{
+            // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab
+            const creating = await chrome.tabs.create(createProperties);
+        }
+        catch (ex) {
+            reject(ex);
+        }
+    });
+};*/
